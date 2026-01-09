@@ -125,6 +125,30 @@ Edit `styles.css` to customize colors, fonts, and layout. The CSS uses CSS custo
 
 ## Local Development
 
+### Option 1: Docker (Recommended)
+
+The easiest way to preview locally with Docker:
+
+```bash
+# Start the container
+docker-compose up
+
+# Or run in detached mode
+docker-compose up -d
+
+# Stop the container
+docker-compose down
+```
+
+Then visit `http://localhost:8000` in your browser.
+
+The Docker setup includes:
+- Live file mounting - changes to HTML, CSS, JS, and YAML reflect immediately
+- Proper YAML MIME type configuration
+- Nginx-based static file serving
+
+### Option 2: Simple Local Server
+
 1. Clone the repository
 2. Open `index.html` in a web browser, or use a local server:
 
@@ -150,6 +174,11 @@ php -S localhost:8000
 ├── styles.css           # Stylesheet (GitHub-inspired theme)
 ├── app.js              # JavaScript for loading and displaying status
 ├── status-config.yaml  # Your relationship status configuration
+├── l_e_banner.png      # Banner image
+├── Dockerfile          # Docker container configuration
+├── docker-compose.yml  # Docker Compose setup for local preview
+├── nginx.conf          # Nginx configuration for proper YAML serving
+├── .dockerignore       # Docker build exclusions
 ├── .github/
 │   └── workflows/
 │       └── pages.yml   # GitHub Pages deployment workflow

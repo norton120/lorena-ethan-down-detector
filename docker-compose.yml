@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:80"
+    volumes:
+      # Mount files for live development - changes reflect immediately
+      - ./index.html:/usr/share/nginx/html/index.html:ro
+      - ./styles.css:/usr/share/nginx/html/styles.css:ro
+      - ./app.js:/usr/share/nginx/html/app.js:ro
+      - ./status-config.yaml:/usr/share/nginx/html/status-config.yaml:ro
+      - ./l_e_banner.png:/usr/share/nginx/html/l_e_banner.png:ro
+    restart: unless-stopped
+    container_name: lorena-ethan-status-page

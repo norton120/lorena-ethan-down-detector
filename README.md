@@ -1,12 +1,12 @@
 # Lorena & Ethan Relationship Status Page
 
-A GitHub Status Page inspired relationship status tracker. Because every on-again, off-again relationship deserves proper monitoring and incident reporting.
+A GitHub Status Page inspired relationship status tracker. Because every off-again, on-again relationship deserves proper monitoring and incident reporting.
 
 ## Features
 
-- **Real-time Status Monitoring**: Track key relationship metrics
-- **Component Status**: Monitor individual aspects like communication, exclusivity, and family awareness
-- **Incident Reporting**: Document and track relationship events with timestamps
+- **Real-time Status Monitoring**: Quickly identify if they are together or not
+- **Component Status**: Monitor individual aspects of the relationship without having to ask or assume
+- **Incident Reporting**: Document and track outages for easy reference
 - **GitHub Pages Ready**: Easy deployment with GitHub Actions
 - **YAML Configuration**: Simple file-based updates, no database required
 - **Responsive Design**: Works beautifully on desktop and mobile
@@ -15,10 +15,13 @@ A GitHub Status Page inspired relationship status tracker. Because every on-agai
 
 - Speaking to Each Other
 - Lorena's Parents Know
+- Hooking Up
 - Not Seeing Other People
 - Consider Themselves a Couple
-- Date Night Frequency
-- Emotional Support Systems
+- Each Other's Emergency Contacts
+- Planning Future Things Together
+- Living Together
+
 
 ## Quick Start
 
@@ -74,8 +77,7 @@ The page will automatically update within a few minutes!
 
 ### Incident Status
 - `resolved` - Issue fixed
-- `monitoring` - Watching closely
-- `investigating` - Working on it
+- `ongoing` - Issue not fixed
 
 ## Customization
 
@@ -162,19 +164,8 @@ The page auto-refreshes every 5 minutes. Manual refresh works instantly.
 ### Can I make this private?
 Yes! Make your repository private in GitHub settings. Note that GitHub Pages on private repos requires GitHub Pro, Team, or Enterprise.
 
-### Can I use this for something other than a relationship?
-Absolutely! Edit the components and messaging to track anything you want - project status, friendship metrics, pet mood monitoring, coffee machine uptime, etc.
-
 ### Why did you build this?
 Love, humor, and a deep appreciation for status pages. Also, because proper incident reporting makes everything better.
-
-## Contributing
-
-Pull requests welcome! Especially for:
-- Additional themes
-- Uptime percentage calculations
-- Email/SMS notifications (just kidding... or are we?)
-- More relationship metrics
 
 ## License
 
@@ -183,9 +174,3 @@ MIT License - Use it, fork it, make your own status page for whatever you want t
 ## Credits
 
 Inspired by [GitHub Status](https://www.githubstatus.com/) and the beautiful chaos of on-again, off-again relationships everywhere.
-
-Built with love (and occasional degraded performance) by the statuspage.js framework of emotions.
-
----
-
-**Current Status**: All systems operational ❤️

@@ -5,13 +5,28 @@
     --status-degraded: #bf8700;
     --status-partial: #d73a49;
     --status-major: #cb2431;
-    --background: #0d1117;
-    --surface: #161b22;
-    --surface-light: #21262d;
-    --border: #30363d;
-    --text-primary: #c9d1d9;
-    --text-secondary: #8b949e;
-    --text-muted: #6e7681;
+
+    /* Light mode colors */
+    --background: #ffffff;
+    --surface: #f6f8fa;
+    --surface-light: #ffffff;
+    --border: #d0d7de;
+    --text-primary: #24292f;
+    --text-secondary: #57606a;
+    --text-muted: #6e7781;
+}
+
+/* Dark mode colors */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #0d1117;
+        --surface: #161b22;
+        --surface-light: #21262d;
+        --border: #30363d;
+        --text-primary: #c9d1d9;
+        --text-secondary: #8b949e;
+        --text-muted: #6e7681;
+    }
 }
 
 * {

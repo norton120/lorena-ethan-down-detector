@@ -157,6 +157,20 @@ function updateTimestamp() {
     document.getElementById('last-updated').textContent = now.toLocaleString('en-US', options);
 }
 
+// Toggle incidents section
+function toggleIncidents() {
+    const content = document.getElementById('incidents-content');
+    const toggle = document.getElementById('incidents-toggle');
+
+    if (content.style.display === 'none') {
+        content.style.display = 'block';
+        toggle.classList.add('expanded');
+    } else {
+        content.style.display = 'none';
+        toggle.classList.remove('expanded');
+    }
+}
+
 // Initialize the page
 async function init() {
     const config = await loadConfig();

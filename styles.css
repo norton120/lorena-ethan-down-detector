@@ -31,7 +31,7 @@ body {
 /* Full-width banner */
 .banner-container {
     width: 100%;
-    height: 200px;
+    height: 280px;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -52,32 +52,21 @@ body {
     padding: 20px;
 }
 
-/* Header */
-header {
-    text-align: center;
-    padding: 40px 20px 20px;
-    margin-bottom: 40px;
-}
-
-header h1 {
-    font-size: 48px;
-    font-weight: 600;
-    margin-bottom: 0;
-    background: linear-gradient(135deg, #ff6b6b, #ee5a6f, #c44569);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
 /* Status Banner - Centered and Prominent */
 .status-banner {
     text-align: center;
-    padding: 32px 24px;
+    padding: 48px 24px;
     margin-bottom: 48px;
-    display: flex;
-    flex-direction: column;
+}
+
+.status-content {
+    display: inline-flex;
     align-items: center;
-    gap: 16px;
+    gap: 20px;
+}
+
+.status-text {
+    text-align: left;
 }
 
 .status-icon {
@@ -152,8 +141,9 @@ section h3 {
     border-radius: 8px;
     padding: 20px;
     display: flex;
-    flex-direction: column;
-    gap: 12px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     transition: background-color 0.2s, border-color 0.2s;
 }
 
@@ -163,7 +153,7 @@ section h3 {
 }
 
 .component-info {
-    flex: 1;
+    flex: 0 1 auto;
 }
 
 .component-name {
@@ -184,6 +174,7 @@ section h3 {
     gap: 8px;
     font-size: 14px;
     font-weight: 500;
+    flex-shrink: 0;
 }
 
 .status-indicator {
@@ -228,6 +219,42 @@ section h3 {
 .status-label.major-outage,
 .status-label.major {
     color: var(--status-major);
+}
+
+/* Incidents Toggle */
+.incidents-toggle {
+    cursor: pointer;
+    padding: 12px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    user-select: none;
+}
+
+.incidents-toggle-text {
+    font-size: 14px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.incidents-toggle-icon {
+    font-size: 12px;
+    color: var(--text-muted);
+    transition: transform 0.2s;
+}
+
+.incidents-toggle.expanded .incidents-toggle-icon {
+    transform: rotate(-180deg);
+}
+
+.incidents-toggle:hover .incidents-toggle-text {
+    color: var(--text-primary);
+}
+
+.incidents-content {
+    margin-top: 16px;
 }
 
 /* Incidents */
@@ -360,11 +387,16 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
     .banner-container {
-        height: 150px;
+        height: 200px;
     }
 
-    header h1 {
-        font-size: 36px;
+    .status-content {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .status-text {
+        text-align: center;
     }
 
     .status-text h2 {
@@ -373,6 +405,12 @@ footer {
 
     .components-list {
         grid-template-columns: 1fr;
+    }
+
+    .component-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
     }
 
     .incident-header {

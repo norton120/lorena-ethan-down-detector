@@ -16,17 +16,15 @@
     </div>
 
     <div class="container">
-        <header>
-            <h1>Lorena & Ethan</h1>
-        </header>
-
         <main>
             <!-- Overall Status Banner -->
             <section class="status-banner" id="status-banner">
-                <div class="status-icon" id="status-icon"></div>
-                <div class="status-text">
-                    <h2 id="status-title">All Systems Operational</h2>
-                    <p id="status-description">All relationship components are functioning normally.</p>
+                <div class="status-content">
+                    <div class="status-text">
+                        <h2 id="status-title">All Systems Operational</h2>
+                        <p id="status-description">All relationship components are functioning normally.</p>
+                    </div>
+                    <div class="status-icon" id="status-icon"></div>
                 </div>
             </section>
 
@@ -39,12 +37,17 @@
 
             <!-- Incidents Section -->
             <section class="incidents-section">
-                <h3>Recent Updates & Incidents</h3>
-                <div class="incidents-list" id="incidents-list">
-                    <!-- Incidents will be dynamically loaded here -->
+                <div class="incidents-toggle" id="incidents-toggle" onclick="toggleIncidents()">
+                    <span class="incidents-toggle-text">Incident History</span>
+                    <span class="incidents-toggle-icon">▼</span>
                 </div>
-                <div class="no-incidents" id="no-incidents" style="display: none;">
-                    <p>No recent incidents to report.</p>
+                <div class="incidents-content" id="incidents-content" style="display: none;">
+                    <div class="incidents-list" id="incidents-list">
+                        <!-- Incidents will be dynamically loaded here -->
+                    </div>
+                    <div class="no-incidents" id="no-incidents" style="display: none;">
+                        <p>No recent incidents to report.</p>
+                    </div>
                 </div>
             </section>
 

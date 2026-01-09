@@ -371,19 +371,6 @@ section h3 {
     color: var(--text-secondary);
 }
 
-/* History Section */
-.history-section {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 24px;
-}
-
-.history-note {
-    color: var(--text-muted);
-    font-style: italic;
-}
-
 /* Footer */
 footer {
     text-align: center;

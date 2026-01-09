@@ -68,10 +68,11 @@ function renderComponents(components) {
 
         const statusClass = component.status.replace(/_/g, '-');
         const statusLabel = statusLabels[component.status] || component.status;
+        const icon = component.icon || '';
 
         item.innerHTML = `
             <div class="component-info">
-                <div class="component-name">${component.name}</div>
+                <div class="component-name">${icon ? icon + ' ' : ''}${component.name}</div>
                 <div class="component-description">${component.description || ''}</div>
             </div>
             <div class="component-status">
@@ -104,7 +105,8 @@ function renderIncidents(incidents) {
         const card = document.createElement('div');
         card.className = 'incident-card';
 
-        const statusClass = incident.status || 'investigating';
+        const statusClass = incident.status || 'ongoing';
+        const statusLabel = incident.status === 'resolved' ? 'Resolved' : 'Ongoing';
 
         let updatesHTML = '';
         if (incident.updates && incident.updates.length > 0) {
@@ -123,7 +125,7 @@ function renderIncidents(incidents) {
         card.innerHTML = `
             <div class="incident-header">
                 <div class="incident-title">${incident.title}</div>
-                <div class="incident-status ${statusClass}">${statusClass}</div>
+                <div class="incident-status ${statusClass}">${statusLabel}</div>
             </div>
             <div class="incident-date">${formatDate(incident.date)}</div>
             <div class="incident-description">${incident.description || ''}</div>
@@ -178,6 +180,3 @@ if (document.readyState === 'loading') {
 } else {
     init();
 }
-
-// Auto-refresh every 5 minutes
-setInterval(init, 5 * 60 * 1000);

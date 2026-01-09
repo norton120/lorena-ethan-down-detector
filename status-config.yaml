@@ -7,28 +7,44 @@ overall_status: operational
 # Individual status components
 components:
   - name: "Speaking to Each Other"
+    icon: "💬"
     status: operational
     description: "Daily communication and conversation quality"
 
   - name: "Lorena's Parents Know"
+    icon: "👨‍👩‍👧"
     status: operational
     description: "Relationship transparency with family"
 
+  - name: "Hooking Up"
+    icon: "🔥"
+    status: operational
+    description: "Physical intimacy and connection"
+
   - name: "Not Seeing Other People"
+    icon: "💍"
     status: operational
     description: "Exclusive relationship status"
 
   - name: "Consider Themselves a Couple"
+    icon: "❤️"
     status: operational
     description: "Mutual agreement on relationship status"
 
-  - name: "Date Night Frequency"
+  - name: "Each Other's Emergency Contacts"
+    icon: "📞"
     status: operational
-    description: "Regular quality time together"
+    description: "Listed as primary emergency contact"
 
-  - name: "Emotional Support Systems"
+  - name: "Planning Future Things Together"
+    icon: "🗓️"
     status: operational
-    description: "Being there for each other"
+    description: "Making plans and commitments for the future"
+
+  - name: "Living Together"
+    icon: "🏠"
+    status: operational
+    description: "Shared living arrangements"
 
 # Incidents (newest first)
 incidents:

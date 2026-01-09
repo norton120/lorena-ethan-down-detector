@@ -52,7 +52,7 @@ components:
 
   - name: "Living Together"
     icon: "🏠"
-    status: degraded_performance
+    status: partial_outage
     description: "Shared living arrangements"
 
 # Incidents (newest first)
@@ -71,8 +71,8 @@ incidents:
   - date: "2024-05-22"
     title: "Ethan moved to boat"
     status: resolved
-    description: "Living in different places."
+    description: "Living in distant places in the world"
   - date: "2023-09-19"
     title: "Lorena moved into her own apartment"
     status: resolved
-    description: "Transition to living apart."
+    description: "Initial breakup over money and priotities and mariachhi music."

@@ -16,6 +16,10 @@ components:
     status: major_outage
     description: "Relationship transparency with family"
 
+  - name: "Ethan's Parents Know"
+    icon: "👨‍👩‍👧"
+    status: operational
+    description: "Relationship transparency with family"
   - name: "Friends Know"
     icon: "👫"
     status: operational
@@ -28,7 +32,7 @@ components:
 
   - name: "Not Seeing Other People"
     icon: "💍"
-    status: degraded_performance
+    status: operational
     description: "Exclusive relationship status"
 
   - name: "Consider Themselves a Couple"

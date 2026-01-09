@@ -187,12 +187,6 @@ php -S localhost:8000
 
 ## FAQ
 
-### How often does the page update?
-The page auto-refreshes every 5 minutes. Manual refresh works instantly.
-
-### Can I make this private?
-Yes! Make your repository private in GitHub settings. Note that GitHub Pages on private repos requires GitHub Pro, Team, or Enterprise.
-
 ### Why did you build this?
 Love, humor, and a deep appreciation for status pages. Also, because proper incident reporting makes everything better.
 

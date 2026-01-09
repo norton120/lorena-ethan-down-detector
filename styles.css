@@ -91,6 +91,19 @@ header h1 {
     background-color: var(--status-operational);
 }
 
+.status-icon.degraded-performance {
+    background-color: var(--status-degraded);
+}
+
+.status-icon.partial-outage {
+    background-color: var(--status-partial);
+}
+
+.status-icon.major-outage {
+    background-color: var(--status-major);
+}
+
+/* Legacy class names for backwards compatibility */
 .status-icon.degraded {
     background-color: var(--status-degraded);
 }
@@ -183,14 +196,17 @@ section h3 {
     background-color: var(--status-operational);
 }
 
+.status-indicator.degraded-performance,
 .status-indicator.degraded {
     background-color: var(--status-degraded);
 }
 
+.status-indicator.partial-outage,
 .status-indicator.partial {
     background-color: var(--status-partial);
 }
 
+.status-indicator.major-outage,
 .status-indicator.major {
     background-color: var(--status-major);
 }
@@ -199,14 +215,17 @@ section h3 {
     color: var(--status-operational);
 }
 
+.status-label.degraded-performance,
 .status-label.degraded {
     color: var(--status-degraded);
 }
 
+.status-label.partial-outage,
 .status-label.partial {
     color: var(--status-partial);
 }
 
+.status-label.major-outage,
 .status-label.major {
     color: var(--status-major);
 }

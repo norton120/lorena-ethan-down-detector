@@ -9,7 +9,7 @@ const statusMessages = {
     },
     degraded_performance: {
         title: 'Degraded Performance',
-        description: 'Some relationship components are experiencing minor issues.'
+        description: 'Minor issues with some relationship components; overall functionality is maintained.'
     },
     partial_outage: {
         title: 'Partial Outage',

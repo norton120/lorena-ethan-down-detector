@@ -2,7 +2,7 @@
 
 # Overall relationship status
 # Options: operational, degraded_performance, partial_outage, major_outage
-overall_status: operational
+overall_status: degraded_performance
 
 # Individual status components
 components:
@@ -13,8 +13,13 @@ components:
 
   - name: "Lorena's Parents Know"
     icon: "👨‍👩‍👧"
-    status: operational
+    status: major_outage
     description: "Relationship transparency with family"
+
+  - name: "Friends Know"
+    icon: "👫"
+    status: operational
+    description: "Relationship transparency with friends"
 
   - name: "Hooking Up"
     icon: "🔥"
@@ -23,12 +28,12 @@ components:
 
   - name: "Not Seeing Other People"
     icon: "💍"
-    status: operational
+    status: degraded_performance
     description: "Exclusive relationship status"
 
   - name: "Consider Themselves a Couple"
     icon: "❤️"
-    status: operational
+    status: degraded_performance
     description: "Mutual agreement on relationship status"
 
   - name: "Each Other's Emergency Contacts"
@@ -38,12 +43,12 @@ components:
 
   - name: "Planning Future Things Together"
     icon: "🗓️"
-    status: operational
+    status: partial_outage
     description: "Making plans and commitments for the future"
 
   - name: "Living Together"
     icon: "🏠"
-    status: operational
+    status: degraded_performance
     description: "Shared living arrangements"
 
 # Incidents (newest first)
@@ -55,3 +60,15 @@ incidents:
     updates:
       - time: "14:30 PST"
         message: "All systems operational. Status page is now live!"
+  - date: "2025-06-15"
+    title: "Big blowout while shopping for/buying boat"
+    status: resolved
+    description: "Boat life vs city life escalation."
+  - date: "2024-05-22"
+    title: "Ethan moved to boat"
+    status: resolved
+    description: "Living in different places."
+  - date: "2023-09-19"
+    title: "Lorena moved into her own apartment"
+    status: resolved
+    description: "Transition to living apart."

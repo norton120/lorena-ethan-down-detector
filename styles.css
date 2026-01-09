@@ -1,0 +1,353 @@
+/* GitHub Status Page Inspired Styles */
+
+:root {
+    --status-operational: #2ea44f;
+    --status-degraded: #bf8700;
+    --status-partial: #d73a49;
+    --status-major: #cb2431;
+    --background: #0d1117;
+    --surface: #161b22;
+    --surface-light: #21262d;
+    --border: #30363d;
+    --text-primary: #c9d1d9;
+    --text-secondary: #8b949e;
+    --text-muted: #6e7681;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+    background-color: var(--background);
+    color: var(--text-primary);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 60px 20px 40px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, #ff6b6b, #ee5a6f, #c44569);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.tagline {
+    color: var(--text-secondary);
+    font-size: 18px;
+}
+
+/* Status Banner */
+.status-banner {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.status-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.status-icon.operational {
+    background-color: var(--status-operational);
+}
+
+.status-icon.degraded {
+    background-color: var(--status-degraded);
+}
+
+.status-icon.partial {
+    background-color: var(--status-partial);
+}
+
+.status-icon.major {
+    background-color: var(--status-major);
+}
+
+.status-text h2 {
+    font-size: 24px;
+    margin-bottom: 4px;
+}
+
+.status-text p {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+/* Sections */
+section {
+    margin-bottom: 48px;
+}
+
+section h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+}
+
+/* Components List */
+.components-list {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.component-item {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+.component-item:last-child {
+    border-bottom: none;
+}
+
+.component-item:hover {
+    background-color: var(--surface-light);
+}
+
+.component-info {
+    flex: 1;
+}
+
+.component-name {
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 2px;
+}
+
+.component-description {
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+.component-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.status-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.status-indicator.operational {
+    background-color: var(--status-operational);
+}
+
+.status-indicator.degraded {
+    background-color: var(--status-degraded);
+}
+
+.status-indicator.partial {
+    background-color: var(--status-partial);
+}
+
+.status-indicator.major {
+    background-color: var(--status-major);
+}
+
+.status-label.operational {
+    color: var(--status-operational);
+}
+
+.status-label.degraded {
+    color: var(--status-degraded);
+}
+
+.status-label.partial {
+    color: var(--status-partial);
+}
+
+.status-label.major {
+    color: var(--status-major);
+}
+
+/* Incidents */
+.incidents-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.incident-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.incident-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 12px;
+    gap: 16px;
+}
+
+.incident-title {
+    font-size: 18px;
+    font-weight: 600;
+    flex: 1;
+}
+
+.incident-status {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.incident-status.resolved {
+    background-color: rgba(46, 164, 79, 0.15);
+    color: var(--status-operational);
+}
+
+.incident-status.monitoring {
+    background-color: rgba(191, 135, 0, 0.15);
+    color: var(--status-degraded);
+}
+
+.incident-status.investigating {
+    background-color: rgba(215, 58, 73, 0.15);
+    color: var(--status-partial);
+}
+
+.incident-date {
+    color: var(--text-muted);
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.incident-description {
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+.incident-updates {
+    border-top: 1px solid var(--border);
+    padding-top: 16px;
+}
+
+.incident-update {
+    margin-bottom: 12px;
+    padding-left: 16px;
+    border-left: 2px solid var(--border);
+}
+
+.incident-update:last-child {
+    margin-bottom: 0;
+}
+
+.update-time {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+}
+
+.update-message {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.no-incidents {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 40px;
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+/* History Section */
+.history-section {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 24px;
+}
+
+.history-note {
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    border-top: 1px solid var(--border);
+    margin-top: 60px;
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+.footer-note {
+    margin-top: 8px;
+    font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 36px;
+    }
+
+    .status-banner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .component-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .incident-header {
+        flex-direction: column;
+    }
+
+    .incident-status {
+        align-self: flex-start;
+    }
+}

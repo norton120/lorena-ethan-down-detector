@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lorena & Ethan Status</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Lorena & Ethan</h1>
+            <p class="tagline">Relationship Status</p>
+        </header>
+
+        <main>
+            <!-- Overall Status Banner -->
+            <section class="status-banner" id="status-banner">
+                <div class="status-icon" id="status-icon"></div>
+                <div class="status-text">
+                    <h2 id="status-title">All Systems Operational</h2>
+                    <p id="status-description">All relationship components are functioning normally.</p>
+                </div>
+            </section>
+
+            <!-- Components Status -->
+            <section class="components-section">
+                <h3>Relationship Components</h3>
+                <div class="components-list" id="components-list">
+                    <!-- Components will be dynamically loaded here -->
+                </div>
+            </section>
+
+            <!-- Incidents Section -->
+            <section class="incidents-section">
+                <h3>Recent Updates & Incidents</h3>
+                <div class="incidents-list" id="incidents-list">
+                    <!-- Incidents will be dynamically loaded here -->
+                </div>
+                <div class="no-incidents" id="no-incidents" style="display: none;">
+                    <p>No recent incidents to report.</p>
+                </div>
+            </section>
+
+            <!-- Past Incidents Summary -->
+            <section class="history-section">
+                <h3>Uptime History</h3>
+                <p class="history-note">90-day uptime history coming soon...</p>
+            </section>
+        </main>
+
+        <footer>
+            <p>Last updated: <span id="last-updated"></span></p>
+            <p class="footer-note">Powered by love, caffeine, and YAML</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

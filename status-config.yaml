@@ -1,0 +1,41 @@
+# Lorena & Ethan Relationship Status Configuration
+
+# Overall relationship status
+# Options: operational, degraded_performance, partial_outage, major_outage
+overall_status: operational
+
+# Individual status components
+components:
+  - name: "Speaking to Each Other"
+    status: operational
+    description: "Daily communication and conversation quality"
+
+  - name: "Lorena's Parents Know"
+    status: operational
+    description: "Relationship transparency with family"
+
+  - name: "Not Seeing Other People"
+    status: operational
+    description: "Exclusive relationship status"
+
+  - name: "Consider Themselves a Couple"
+    status: operational
+    description: "Mutual agreement on relationship status"
+
+  - name: "Date Night Frequency"
+    status: operational
+    description: "Regular quality time together"
+
+  - name: "Emotional Support Systems"
+    status: operational
+    description: "Being there for each other"
+
+# Incidents (newest first)
+incidents:
+  - date: "2026-01-09"
+    title: "Status Page Initialized"
+    status: resolved
+    description: "Set up relationship status monitoring system."
+    updates:
+      - time: "14:30 PST"
+        message: "All systems operational. Status page is now live!"

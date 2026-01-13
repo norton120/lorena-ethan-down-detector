@@ -2,13 +2,13 @@
 
 # Overall relationship status
 # Options: operational, degraded_performance, partial_outage, major_outage
-overall_status: partial_outage
+overall_status: degraded_performance
 
 # Individual status components
 components:
   - name: "Speaking to Each Other"
     icon: "💬"
-    status: degrated_performance
+    status: operational
     description: "Daily communication and conversation quality"
 
   - name: "Lorena's Parents Know"

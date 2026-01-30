@@ -37,7 +37,7 @@ components:
 
   - name: "Consider Themselves a Couple"
     icon: "❤️"
-    status: degraded_performance
+    status: operational
     description: "Mutual agreement on relationship status"
 
   - name: "Each Other's Emergency Contacts"
@@ -47,12 +47,12 @@ components:
 
   - name: "Planning Future Things Together"
     icon: "🗓️"
-    status: partial_outage
+    status: degraded_performance
     description: "Making plans and commitments for the future"
 
   - name: "Living Together"
     icon: "🏠"
-    status: partial_outage
+    status: degraded_performance
     description: "Shared living arrangements"
 
 # Incidents (newest first)
